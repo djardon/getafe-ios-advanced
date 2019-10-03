@@ -40,11 +40,20 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7Q5-iZ-oB1">
+                                <rect key="frame" x="172.5" y="60" width="69" height="32"/>
+                                <segments>
+                                    <segment title="" image="ic_selector_list"/>
+                                    <segment title="" image="ic_selector_collection"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UwP-dE-Xfh" secondAttribute="bottom" id="GHC-uf-Fou"/>
                             <constraint firstItem="UwP-dE-Xfh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NLU-np-h7w"/>
+                            <constraint firstItem="7Q5-iZ-oB1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="d80-FY-vXR"/>
+                            <constraint firstItem="7Q5-iZ-oB1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nMo-eK-e8S"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UwP-dE-Xfh" secondAttribute="trailing" id="nlL-Es-uv6"/>
                             <constraint firstItem="4l0-oi-O1j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pJo-Cr-Waa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4l0-oi-O1j" secondAttribute="trailing" id="pVE-L1-iVH"/>
@@ -64,4 +73,8 @@
             <point key="canvasLocation" x="139" y="109"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_selector_collection" width="16" height="16"/>
+        <image name="ic_selector_list" width="10.666666984558105" height="10.666666984558105"/>
+    </resources>
 </document>
