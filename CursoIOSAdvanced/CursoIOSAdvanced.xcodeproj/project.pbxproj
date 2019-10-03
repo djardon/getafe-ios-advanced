@@ -3,16 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0F4E3D14234523E2005DFA5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4E3D13234523E2005DFA5F /* AppDelegate.swift */; };
 		0F4E3D16234523E2005DFA5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4E3D15234523E2005DFA5F /* SceneDelegate.swift */; };
-		0F4E3D18234523E2005DFA5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4E3D17234523E2005DFA5F /* ViewController.swift */; };
+		0F4E3D18234523E2005DFA5F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4E3D17234523E2005DFA5F /* SplashViewController.swift */; };
 		0F4E3D1B234523E2005DFA5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F4E3D19234523E2005DFA5F /* Main.storyboard */; };
 		0F4E3D1D234523E3005DFA5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F4E3D1C234523E3005DFA5F /* Assets.xcassets */; };
 		0F4E3D20234523E3005DFA5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F4E3D1E234523E3005DFA5F /* LaunchScreen.storyboard */; };
+		0F571BCD23465115000BB376 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F571BCC23465115000BB376 /* UsersViewController.swift */; };
+		0F571BCE23465226000BB376 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F571BD023465226000BB376 /* Splash.storyboard */; };
+		0F571BD4234662AC000BB376 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F571BD2234662AC000BB376 /* PersonTableViewCell.swift */; };
+		0F571BD5234662AC000BB376 /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F571BD3234662AC000BB376 /* PersonTableViewCell.xib */; };
+		0F571BD923466583000BB376 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F571BD823466583000BB376 /* UIView+Utils.swift */; };
+		0F571BDC2346698E000BB376 /* PersonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F571BDA2346698E000BB376 /* PersonCollectionViewCell.swift */; };
+		0F571BDD2346698E000BB376 /* PersonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F571BDB2346698E000BB376 /* PersonCollectionViewCell.xib */; };
 		DEA0DA86558E3E5277A9B952 /* Pods_CursoIOSAdvanced.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5600CFB193B50E21864254 /* Pods_CursoIOSAdvanced.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,11 +27,18 @@
 		0F4E3D10234523E2005DFA5F /* CursoIOSAdvanced.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CursoIOSAdvanced.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4E3D13234523E2005DFA5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F4E3D15234523E2005DFA5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0F4E3D17234523E2005DFA5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0F4E3D17234523E2005DFA5F /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		0F4E3D1A234523E2005DFA5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F4E3D1C234523E3005DFA5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F4E3D1F234523E3005DFA5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F4E3D21234523E3005DFA5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F571BCC23465115000BB376 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		0F571BCF23465226000BB376 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Splash.storyboard; sourceTree = "<group>"; };
+		0F571BD2234662AC000BB376 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
+		0F571BD3234662AC000BB376 /* PersonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
+		0F571BD823466583000BB376 /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
+		0F571BDA2346698E000BB376 /* PersonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCollectionViewCell.swift; sourceTree = "<group>"; };
+		0F571BDB2346698E000BB376 /* PersonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonCollectionViewCell.xib; sourceTree = "<group>"; };
 		6BD80344196F49C9E9FF7F3F /* Pods-CursoIOSAdvanced.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CursoIOSAdvanced.debug.xcconfig"; path = "Target Support Files/Pods-CursoIOSAdvanced/Pods-CursoIOSAdvanced.debug.xcconfig"; sourceTree = "<group>"; };
 		DF51D06A32F7A00D18B1B214 /* Pods-CursoIOSAdvanced.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CursoIOSAdvanced.release.xcconfig"; path = "Target Support Files/Pods-CursoIOSAdvanced/Pods-CursoIOSAdvanced.release.xcconfig"; sourceTree = "<group>"; };
 		FE5600CFB193B50E21864254 /* Pods_CursoIOSAdvanced.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CursoIOSAdvanced.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,15 +77,86 @@
 		0F4E3D12234523E2005DFA5F /* CursoIOSAdvanced */ = {
 			isa = PBXGroup;
 			children = (
-				0F4E3D13234523E2005DFA5F /* AppDelegate.swift */,
-				0F4E3D15234523E2005DFA5F /* SceneDelegate.swift */,
-				0F4E3D17234523E2005DFA5F /* ViewController.swift */,
-				0F4E3D19234523E2005DFA5F /* Main.storyboard */,
-				0F4E3D1C234523E3005DFA5F /* Assets.xcassets */,
-				0F4E3D1E234523E3005DFA5F /* LaunchScreen.storyboard */,
 				0F4E3D21234523E3005DFA5F /* Info.plist */,
+				0F571BC42346444F000BB376 /* App */,
+				0F571BC52346445D000BB376 /* Resources */,
+				0F571BD72346656E000BB376 /* Extensions */,
+				0F571BC623464470000BB376 /* Data */,
+				0F571BC72346447B000BB376 /* UI */,
 			);
 			path = CursoIOSAdvanced;
+			sourceTree = "<group>";
+		};
+		0F571BC42346444F000BB376 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0F4E3D13234523E2005DFA5F /* AppDelegate.swift */,
+				0F4E3D15234523E2005DFA5F /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0F571BC52346445D000BB376 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0F4E3D1C234523E3005DFA5F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0F571BC623464470000BB376 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0F571BC72346447B000BB376 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0F571BC92346448E000BB376 /* Storyboards */,
+				0F571BD6234662C2000BB376 /* Cells */,
+				0F571BC823464488000BB376 /* Controllers */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		0F571BC823464488000BB376 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0F4E3D17234523E2005DFA5F /* SplashViewController.swift */,
+				0F571BCC23465115000BB376 /* UsersViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0F571BC92346448E000BB376 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0F4E3D1E234523E3005DFA5F /* LaunchScreen.storyboard */,
+				0F571BD023465226000BB376 /* Splash.storyboard */,
+				0F4E3D19234523E2005DFA5F /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0F571BD6234662C2000BB376 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0F571BD2234662AC000BB376 /* PersonTableViewCell.swift */,
+				0F571BD3234662AC000BB376 /* PersonTableViewCell.xib */,
+				0F571BDA2346698E000BB376 /* PersonCollectionViewCell.swift */,
+				0F571BDB2346698E000BB376 /* PersonCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0F571BD72346656E000BB376 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0F571BD823466583000BB376 /* UIView+Utils.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		643EF0D0E963D0F8C2BBF2DB /* Pods */ = {
@@ -80,7 +165,6 @@
 				6BD80344196F49C9E9FF7F3F /* Pods-CursoIOSAdvanced.debug.xcconfig */,
 				DF51D06A32F7A00D18B1B214 /* Pods-CursoIOSAdvanced.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -153,8 +237,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F4E3D20234523E3005DFA5F /* LaunchScreen.storyboard in Resources */,
+				0F571BDD2346698E000BB376 /* PersonCollectionViewCell.xib in Resources */,
 				0F4E3D1D234523E3005DFA5F /* Assets.xcassets in Resources */,
 				0F4E3D1B234523E2005DFA5F /* Main.storyboard in Resources */,
+				0F571BCE23465226000BB376 /* Splash.storyboard in Resources */,
+				0F571BD5234662AC000BB376 /* PersonTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,8 +294,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F4E3D18234523E2005DFA5F /* ViewController.swift in Sources */,
+				0F4E3D18234523E2005DFA5F /* SplashViewController.swift in Sources */,
+				0F571BD4234662AC000BB376 /* PersonTableViewCell.swift in Sources */,
+				0F571BCD23465115000BB376 /* UsersViewController.swift in Sources */,
 				0F4E3D14234523E2005DFA5F /* AppDelegate.swift in Sources */,
+				0F571BD923466583000BB376 /* UIView+Utils.swift in Sources */,
+				0F571BDC2346698E000BB376 /* PersonCollectionViewCell.swift in Sources */,
 				0F4E3D16234523E2005DFA5F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,6 +321,14 @@
 				0F4E3D1F234523E3005DFA5F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0F571BD023465226000BB376 /* Splash.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F571BCF23465226000BB376 /* Base */,
+			);
+			name = Splash.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
