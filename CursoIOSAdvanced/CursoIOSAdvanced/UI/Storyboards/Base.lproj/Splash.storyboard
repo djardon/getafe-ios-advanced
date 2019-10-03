@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZMD-3w-0Ul">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="Vww-dc-20B">
+            <objects>
+                <viewController id="ZMD-3w-0Ul" customClass="SplashViewController" customModule="CursoIOSAdvanced" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pZg-9Y-C1m">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="C93-82-CIw">
+                                <rect key="frame" x="87" y="144" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="ahL-9z-hrV"/>
+                                    <constraint firstAttribute="height" constant="240" id="vos-6u-dXa"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7o-bL-47I">
+                                <rect key="frame" x="87" y="424" width="240" height="240"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="rbZ-Fg-Y7D"/>
+                                    <constraint firstAttribute="height" constant="240" id="vsB-wd-JH8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="C7o-bL-47I" firstAttribute="top" secondItem="C93-82-CIw" secondAttribute="bottom" constant="40" id="5r5-OM-yQK"/>
+                            <constraint firstItem="C93-82-CIw" firstAttribute="centerX" secondItem="pZg-9Y-C1m" secondAttribute="centerX" id="PiN-Xq-1cR"/>
+                            <constraint firstItem="C93-82-CIw" firstAttribute="top" secondItem="HH2-Bf-Go3" secondAttribute="top" constant="100" id="euC-uV-OaR"/>
+                            <constraint firstItem="C7o-bL-47I" firstAttribute="centerX" secondItem="pZg-9Y-C1m" secondAttribute="centerX" id="zLJ-T3-ipa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HH2-Bf-Go3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fhq-IX-Fft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="108.48214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_logo" width="341.33334350585938" height="341.33334350585938"/>
+    </resources>
+</document>
