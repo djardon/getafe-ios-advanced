@@ -16,30 +16,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="C93-82-CIw">
-                                <rect key="frame" x="87" y="144" width="240" height="240"/>
+                                <rect key="frame" x="132" y="144" width="150" height="240"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="ahL-9z-hrV"/>
+                                    <constraint firstAttribute="width" constant="150" id="ahL-9z-hrV"/>
                                     <constraint firstAttribute="height" constant="240" id="vos-6u-dXa"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7o-bL-47I">
-                                <rect key="frame" x="87" y="424" width="240" height="240"/>
-                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="147" y="444" width="120" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="rbZ-Fg-Y7D"/>
-                                    <constraint firstAttribute="height" constant="240" id="vsB-wd-JH8"/>
+                                    <constraint firstAttribute="width" secondItem="C7o-bL-47I" secondAttribute="height" multiplier="1:1" id="2ba-AM-j9a"/>
+                                    <constraint firstAttribute="width" constant="120" id="rbZ-Fg-Y7D"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="C7o-bL-47I" firstAttribute="top" secondItem="C93-82-CIw" secondAttribute="bottom" constant="40" id="5r5-OM-yQK"/>
+                            <constraint firstItem="C7o-bL-47I" firstAttribute="top" secondItem="C93-82-CIw" secondAttribute="bottom" constant="60" id="5r5-OM-yQK"/>
                             <constraint firstItem="C93-82-CIw" firstAttribute="centerX" secondItem="pZg-9Y-C1m" secondAttribute="centerX" id="PiN-Xq-1cR"/>
                             <constraint firstItem="C93-82-CIw" firstAttribute="top" secondItem="HH2-Bf-Go3" secondAttribute="top" constant="100" id="euC-uV-OaR"/>
                             <constraint firstItem="C7o-bL-47I" firstAttribute="centerX" secondItem="pZg-9Y-C1m" secondAttribute="centerX" id="zLJ-T3-ipa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HH2-Bf-Go3"/>
                     </view>
+                    <connections>
+                        <outlet property="mViewLoading" destination="C7o-bL-47I" id="w33-av-HDk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fhq-IX-Fft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
