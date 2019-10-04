@@ -38,10 +38,10 @@
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UwP-dE-Xfh">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7Q5-iZ-oB1">
-                                <rect key="frame" x="172.5" y="60" width="69" height="32"/>
+                                <rect key="frame" x="156.5" y="60" width="101" height="32"/>
                                 <segments>
                                     <segment title="" image="ic_selector_list"/>
                                     <segment title="" image="ic_selector_collection"/>
@@ -65,6 +65,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="4l0-oi-O1j" id="LZr-3g-oRl"/>
+                        <outlet property="segmentOptions" destination="7Q5-iZ-oB1" id="zfr-gd-ZLh"/>
                         <outlet property="tableView" destination="UwP-dE-Xfh" id="Clk-12-kwB"/>
                     </connections>
                 </viewController>
