@@ -24,4 +24,27 @@ class UserDAO: Object {
     override static func primaryKey() -> String? {
         return "uuid"
     }
+    
+    convenience init(uuid: String,
+                     avatar: String? = nil,
+                     firstname: String? = nil,
+                     lastname: String? = nil,
+                     email: String? = nil,
+                     gender: String? = nil,
+                     birthdate: Date? = nil,
+                     country: String? = nil,
+                     latitude: String? = nil,
+                     longitude: String? = nil) {
+        self.init()
+        
+        self.uuid = uuid
+        self.avatar = avatar
+        self.firstname = firstname
+        self.lastname = lastname
+        self.gender = gender
+        self.birthdate = birthdate
+        self.country = country
+        self.latitude = latitude
+        self.longitude = longitude
+    }
 }
