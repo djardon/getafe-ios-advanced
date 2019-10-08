@@ -14,44 +14,63 @@ class DataManager {
     private init() {}
     
     
-    func users(completion: ServiceCompletion) {
-        let users = usersDB()
-        if users.count > 0 {
-            // devolver userDB
-            completion(.success(data: users))
-        }
-        else {
-            // llamar al servicio y guardar usuarios
-            // en base de datos
-            usersForceUpdate(completion: completion)
-        }
-    }
-    
-    func usersForceUpdate(completion: ServiceCompletion) {
-        // Llamar al servicio para obtener nuevos usuarios
-        ApiManager.shared.fetchUsers() { result in
-            switch result {
-                case .success(let data):
-                    guard let users = data as? UsersDTO else {
-                        completion(.failure(msg: "Mensaje error genérico"))
-                        return
-                    }
-                    
-                    // Eliminar todos los usuarios de la base de datos
-                    DatabaseManager.shared.deleteAll()
-                    // Guardar usuarios en la base de datos
-                    save(users: users)
+    func users(completion: @escaping ServiceCompletion) {
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            if let users = self?.usersDB(), users.count > 0 {
+                // devolver userDB
+                DispatchQueue.main.async {
                     completion(.success(data: users))
-                
-                case .failure(let msg):
-                    print("Fallo al obtener usuarios del servicio: \(msg)")
-                    completion(.failure(msg: msg))
+                }
+            }
+            else {
+                // llamar al servicio y guardar usuarios
+                // en base de datos
+                self?.usersForceUpdate(completion: completion)
             }
         }
     }
     
-    func user(by id: String) -> UserDAO? {
-        return DatabaseManager.shared.user(by: id)
+    func usersForceUpdate(completion: @escaping ServiceCompletion) {
+        // Llamar al servicio para obtener nuevos usuarios
+        DispatchQueue.global(qos: .background).async {
+            ApiManager.shared.fetchUsers() { [weak self] result in
+                switch result {
+                    case .success(let data):
+                        guard let users = data as? UsersDTO else {
+                            DispatchQueue.main.async {
+                                completion(.failure(msg: "Mensaje error genérico"))
+                            }
+                            return
+                        }
+                        
+                        // Eliminar todos los usuarios de la base de datos
+                        DatabaseManager.shared.deleteAll()
+                        // Guardar usuarios en la base de datos
+                        self?.save(users: users)
+                        
+                        DispatchQueue.main.async {
+                            completion(.success(data: users))
+                        }
+                    
+                    case .failure(let msg):
+                        print("Fallo al obtener usuarios del servicio: \(msg)")
+                    
+                        DispatchQueue.main.async {
+                            completion(.failure(msg: msg))
+                        }
+                }
+            }
+        }
+    }
+    
+    func user(by id: String, completion: @escaping ServiceCompletion) {
+        DispatchQueue.global(qos: .background).async {
+            let userDAO = DatabaseManager.shared.user(by: id)
+            
+            DispatchQueue.main.async {
+                completion(.success(data: userDAO))
+            }
+        }
     }
     
     

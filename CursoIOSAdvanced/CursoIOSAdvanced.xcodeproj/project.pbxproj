@@ -37,6 +37,7 @@
 		0F5781E32347C862008376DD /* TimezoneDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5781E22347C862008376DD /* TimezoneDTO.swift */; };
 		0F5781E72347CADF008376DD /* StreetDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5781E62347CADF008376DD /* StreetDTO.swift */; };
 		0F5781E92347CC6D008376DD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5781E82347CC6D008376DD /* DataManager.swift */; };
+		0F67C746234CEE8D0057394D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F67C745234CEE8D0057394D /* User.swift */; };
 		DEA0DA86558E3E5277A9B952 /* Pods_CursoIOSAdvanced.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5600CFB193B50E21864254 /* Pods_CursoIOSAdvanced.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		0F5781E22347C862008376DD /* TimezoneDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimezoneDTO.swift; sourceTree = "<group>"; };
 		0F5781E62347CADF008376DD /* StreetDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetDTO.swift; sourceTree = "<group>"; };
 		0F5781E82347CC6D008376DD /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		0F67C745234CEE8D0057394D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6BD80344196F49C9E9FF7F3F /* Pods-CursoIOSAdvanced.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CursoIOSAdvanced.debug.xcconfig"; path = "Target Support Files/Pods-CursoIOSAdvanced/Pods-CursoIOSAdvanced.debug.xcconfig"; sourceTree = "<group>"; };
 		DF51D06A32F7A00D18B1B214 /* Pods-CursoIOSAdvanced.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CursoIOSAdvanced.release.xcconfig"; path = "Target Support Files/Pods-CursoIOSAdvanced/Pods-CursoIOSAdvanced.release.xcconfig"; sourceTree = "<group>"; };
 		FE5600CFB193B50E21864254 /* Pods_CursoIOSAdvanced.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CursoIOSAdvanced.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +147,7 @@
 				0F5781E82347CC6D008376DD /* DataManager.swift */,
 				0F5781CC2347BED5008376DD /* Remote */,
 				0F5781C82347B650008376DD /* Local */,
+				0F67C743234CEE6E0057394D /* Views */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -238,6 +241,22 @@
 				0F5781E62347CADF008376DD /* StreetDTO.swift */,
 				0F5781E02347C841008376DD /* LoginDTO.swift */,
 				0F5781DC2347C814008376DD /* IdDTO.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0F67C743234CEE6E0057394D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0F67C744234CEE7B0057394D /* Models */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0F67C744234CEE7B0057394D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0F67C745234CEE8D0057394D /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -398,6 +417,7 @@
 				0F5781D92347C7D0008376DD /* PictureDTO.swift in Sources */,
 				0F5781DF2347C828008376DD /* LocationDTO.swift in Sources */,
 				0F4E3D16234523E2005DFA5F /* SceneDelegate.swift in Sources */,
+				0F67C746234CEE8D0057394D /* User.swift in Sources */,
 				0F10F41B234BAEB600E08903 /* ApiManager.swift in Sources */,
 				0F5781D12347C0E3008376DD /* InfoDTO.swift in Sources */,
 				0F5781D52347C7A1008376DD /* DobDTO.swift in Sources */,
