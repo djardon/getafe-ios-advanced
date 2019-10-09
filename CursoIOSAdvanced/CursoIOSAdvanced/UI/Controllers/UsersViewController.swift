@@ -19,11 +19,30 @@ class UsersViewController: UIViewController {
     
     // MARK: - Properties
     private var cellSpacing: CGFloat = 16.0
+    private var users: Array<User> = []
     
     
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadUsers()
+    }
+    
+    private func loadUsers() {
+        DataManager.shared.users { [weak self] result in
+            switch result {
+                case .success(let data):
+                    guard let users = data as? Array<User> else {
+                        return
+                    }
+                
+                    self?.users = users
+                    
+                case .failure(let msg):
+                    print(msg)
+            }
+        }
     }
 }
 
