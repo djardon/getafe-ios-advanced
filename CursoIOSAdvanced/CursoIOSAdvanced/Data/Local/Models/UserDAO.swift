@@ -18,6 +18,7 @@ class UserDAO: Object {
     @objc dynamic var gender: String?
     @objc dynamic var birthdate: Date?
     @objc dynamic var country: String?
+    @objc dynamic var nationality: String?
     @objc dynamic var latitude: String?
     @objc dynamic var longitude: String?
     
@@ -33,6 +34,7 @@ class UserDAO: Object {
                      gender: String? = nil,
                      birthdate: Date? = nil,
                      country: String? = nil,
+                     nationality: String? = nil,
                      latitude: String? = nil,
                      longitude: String? = nil) {
         self.init()
@@ -44,6 +46,7 @@ class UserDAO: Object {
         self.gender = gender
         self.birthdate = birthdate
         self.country = country
+        self.nationality = nationality
         self.latitude = latitude
         self.longitude = longitude
     }

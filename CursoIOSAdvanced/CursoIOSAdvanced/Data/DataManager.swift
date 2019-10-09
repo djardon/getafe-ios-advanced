@@ -16,7 +16,7 @@ class DataManager {
     
     func users(completion: @escaping ServiceCompletion) {
         DispatchQueue.global(qos: .background).async { [weak self] in
-            if let users = self?.usersDB(), users.count > 0 {
+            if let users = self?.usersFromUsersDB(), users.count > 0 {
                 // devolver userDB
                 DispatchQueue.main.async {
                     completion(.success(data: users))
@@ -36,7 +36,7 @@ class DataManager {
             ApiManager.shared.fetchUsers() { [weak self] result in
                 switch result {
                     case .success(let data):
-                        guard let users = data as? UsersDTO else {
+                        guard let usersDTO = data as? UsersDTO else {
                             DispatchQueue.main.async {
                                 completion(.failure(msg: "Mensaje error genérico"))
                             }
@@ -46,7 +46,9 @@ class DataManager {
                         // Eliminar todos los usuarios de la base de datos
                         DatabaseManager.shared.deleteAll()
                         // Guardar usuarios en la base de datos
-                        self?.save(users: users)
+                        self?.save(users: usersDTO)
+                        // Cargar usuarios almacenados en la base de datos
+                        let users = self?.usersFromUsersDB()
                         
                         DispatchQueue.main.async {
                             completion(.success(data: users))
@@ -64,11 +66,18 @@ class DataManager {
     }
     
     func user(by id: String, completion: @escaping ServiceCompletion) {
-        DispatchQueue.global(qos: .background).async {
-            let userDAO = DatabaseManager.shared.user(by: id)
-            
-            DispatchQueue.main.async {
-                completion(.success(data: userDAO))
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            if let userDAO = DatabaseManager.shared.user(by: id) {
+                let user = self?.user(from: userDAO)
+                
+                DispatchQueue.main.async {
+                    completion(.success(data: user))
+                }
+            }
+            else {
+                DispatchQueue.main.async {
+                    completion(.failure(msg: "No se ha encontrado el usuario"))
+                }
             }
         }
     }
@@ -99,9 +108,34 @@ class DataManager {
                              gender: user.gender,
                              birthdate: user.dob?.date,
                              country: user.location?.country,
+                             nationality: user.nat,
                              latitude: user.location?.coordinates?.latitude,
                              longitude: user.location?.coordinates?.longitude)
         
         DatabaseManager.shared.save(user: userDB)
+    }
+    
+    private func usersFromUsersDB() -> Array<User> {
+        let usersDAO = usersDB()
+        // Convertir listado de UserDAO a listado de User
+        return users(from: usersDAO)
+    }
+    
+    
+    private func users(from usersDAO: Array<UserDAO>) -> Array<User> {
+        return usersDAO.compactMap { userDAO in
+            return self.user(from: userDAO)
+        }
+    }
+    
+    private func user(from userDAO: UserDAO) -> User {
+        return User(id: userDAO.uuid,
+                    avatar: userDAO.avatar,
+                    firstName: userDAO.firstname,
+                    lastName: userDAO.lastname,
+                    email: userDAO.email,
+                    birthdate: userDAO.birthdate,
+                    country: userDAO.country,
+                    nationality: userDAO.nationality)
     }
 }

@@ -24,9 +24,13 @@ class User {
     }
     
     var age: Int {
-
+        guard let date = birthdate,
+              let yearAge = Calendar.current.dateComponents([.year],
+                                                                  from: date, to: Date()).year else {
+            return 0
+        }
         
-        return 0
+        return yearAge
     }
     
     
