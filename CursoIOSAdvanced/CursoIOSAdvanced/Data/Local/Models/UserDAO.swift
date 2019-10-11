@@ -43,6 +43,7 @@ class UserDAO: Object {
         self.avatar = avatar
         self.firstname = firstname
         self.lastname = lastname
+        self.email = email
         self.gender = gender
         self.birthdate = birthdate
         self.country = country

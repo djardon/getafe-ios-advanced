@@ -61,7 +61,7 @@ class UsersViewController: UIViewController {
                             
                         default:
                             self?.collectionView.reloadData()
-                }
+                    }
                     
                 case .failure(let msg):
                     print(msg)
@@ -78,6 +78,10 @@ extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.register(UINib(nibName: PersonTableViewCell.cellIdentifier,
                                  bundle: nil),
                            forCellReuseIdentifier: PersonTableViewCell.cellIdentifier)
+        tableView.contentInset = UIEdgeInsets(top: segmentOptions.frame.origin.y + segmentOptions.bounds.height,
+                                              left: 0,
+                                              bottom: 0,
+                                              right: 0)
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -112,6 +116,11 @@ extension UsersViewController: UICollectionViewDelegate, UICollectionViewDataSou
         collectionView.register(UINib(nibName: PersonCollectionViewCell.cellIdentifier,
                                       bundle: nil),
                                 forCellWithReuseIdentifier: PersonCollectionViewCell.cellIdentifier)
+        
+        collectionView.contentInset = UIEdgeInsets(top:  segmentOptions.frame.origin.y + segmentOptions.bounds.height,
+                                                   left: 0,
+                                                   bottom: 0,
+                                                   right: 0)
         
         collectionView.dataSource = self
         collectionView.delegate = self
