@@ -10,5 +10,11 @@ import Foundation
 
 struct TimezoneDTO: Codable {
     let offset: String?
-    let description: String?
+    let info: String?
+    
+    
+    private enum CodingKeys: String, CodingKey {
+        case info = "description"
+        case offset
+    }
 }

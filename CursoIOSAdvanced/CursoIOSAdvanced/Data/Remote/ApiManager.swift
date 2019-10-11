@@ -28,6 +28,29 @@ class ApiManager {
         // Llamar al servicio
         
         // Devolver datos
-        completion(.success(data: "BIIIIEN"))
+        completion(.success(data: testLoadUsersJson()))
+    }
+    
+    private func testLoadUsersJson() -> UsersDTO? {
+        if let path = Bundle.main.path(forResource: "users", ofType: "json") {
+            do {
+                let jsonData = try Data(contentsOf: URL(fileURLWithPath: path))
+                
+                let decoder = JSONDecoder()
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+                decoder.dateDecodingStrategy = .formatted(dateFormatter)
+                
+                return try decoder.decode(UsersDTO.self, from: jsonData)
+            }
+            catch let error {
+                print("parse error: \(error.localizedDescription)")
+                return nil
+            }
+        }
+        else {
+            print("Invalid filename/path.")
+            return nil
+        }
     }
 }

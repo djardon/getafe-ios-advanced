@@ -13,9 +13,9 @@ struct LocationDTO: Codable {
     let state: String?
     let coordinates: CoordinatesDTO?
     
-    // ¿Service Error?
     let street: StreetDTO?
     let country: String?
-    let postcode: String?
     let timezone: TimezoneDTO?
+    // Service Error
+    //let postcode: Int?
 }

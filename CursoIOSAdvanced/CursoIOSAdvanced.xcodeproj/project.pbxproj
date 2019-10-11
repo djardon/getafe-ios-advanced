@@ -14,6 +14,7 @@
 		0F4E3D1B234523E2005DFA5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F4E3D19234523E2005DFA5F /* Main.storyboard */; };
 		0F4E3D1D234523E3005DFA5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F4E3D1C234523E3005DFA5F /* Assets.xcassets */; };
 		0F4E3D20234523E3005DFA5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F4E3D1E234523E3005DFA5F /* LaunchScreen.storyboard */; };
+		0F540AA8234E518100747252 /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F540AA7234E518100747252 /* users.json */; };
 		0F56CAE3234B890F00C34A67 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F56CAE2234B890F00C34A67 /* DatabaseManager.swift */; };
 		0F571BCD23465115000BB376 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F571BCC23465115000BB376 /* UsersViewController.swift */; };
 		0F571BCE23465226000BB376 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F571BD023465226000BB376 /* Splash.storyboard */; };
@@ -51,6 +52,7 @@
 		0F4E3D1C234523E3005DFA5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F4E3D1F234523E3005DFA5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F4E3D21234523E3005DFA5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F540AA7234E518100747252 /* users.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
 		0F56CAE2234B890F00C34A67 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		0F571BCC23465115000BB376 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		0F571BCF23465226000BB376 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Splash.storyboard; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				0F5781C6234796E8008376DD /* loading_animation.json */,
+				0F540AA7234E518100747252 /* users.json */,
 				0F4E3D1C234523E3005DFA5F /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -342,6 +345,7 @@
 				0F571BDD2346698E000BB376 /* PersonCollectionViewCell.xib in Resources */,
 				0F4E3D1D234523E3005DFA5F /* Assets.xcassets in Resources */,
 				0F5781C7234796E8008376DD /* loading_animation.json in Resources */,
+				0F540AA8234E518100747252 /* users.json in Resources */,
 				0F4E3D1B234523E2005DFA5F /* Main.storyboard in Resources */,
 				0F571BCE23465226000BB376 /* Splash.storyboard in Resources */,
 				0F571BD5234662AC000BB376 /* PersonTableViewCell.xib in Resources */,

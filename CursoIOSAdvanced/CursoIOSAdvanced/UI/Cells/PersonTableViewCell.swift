@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 
 class PersonTableViewCell: UITableViewCell {
@@ -31,9 +32,10 @@ class PersonTableViewCell: UITableViewCell {
         mView.configureShadows()
     }
     
-    func configureCell(image: String? = nil, name: String? = nil, email: String? = nil) {
-        mImage.image = UIImage(named: image ?? "")
+    func configureCell(image: String? = nil, name: String? = nil, subtitle: String? = nil) {
+        let url = URL(string: image ?? "")
+        mImage.kf.setImage(with: url)
         mLabelName.text = name
-        mLabelEmail.text = email
+        mLabelEmail.text = subtitle
     }
 }

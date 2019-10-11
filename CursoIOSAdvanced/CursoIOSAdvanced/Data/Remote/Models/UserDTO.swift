@@ -22,6 +22,6 @@ struct UserDTO: Codable {
 
     // Hide because service return some
     // errors with this data
-    //let id: IdDTO?
+    let id: IdDTO?
     let login: LoginDTO?
 }

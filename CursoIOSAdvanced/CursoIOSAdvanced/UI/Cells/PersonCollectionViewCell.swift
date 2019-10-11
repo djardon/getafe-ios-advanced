@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PersonCollectionViewCell: UICollectionViewCell {
     static let cellIdentifier = String(describing: PersonCollectionViewCell.self)
@@ -37,7 +38,8 @@ class PersonCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Configure methods -
     func configureCell(image: String? = nil, title: String? = nil) {
-        mImage.image = UIImage(named: image ?? "")
+        let url = URL(string: image ?? "")
+        mImage.kf.setImage(with: url)
         mLabelName.text = title
     }
 }

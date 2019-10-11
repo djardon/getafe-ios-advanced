@@ -1,0 +1,284 @@
+{
+    "results": [{
+        "gender": "male",
+        "name": {
+            "title": "Mr",
+            "first": "آرسین",
+            "last": "پارسا"
+        },
+        "location": {
+            "street": {
+                "number": 1136,
+                "name": "شهید مطهری"
+            },
+            "city": "یزد",
+            "state": "خراسان رضوی",
+            "country": "Iran",
+            "postcode": 19183,
+            "coordinates": {
+                "latitude": "29.2172",
+                "longitude": "-6.7668"
+            },
+            "timezone": {
+                "offset": "+9:00",
+                "description": "Tokyo, Seoul, Osaka, Sapporo, Yakutsk"
+            }
+        },
+        "email": "arsyn.prs@example.com",
+        "login": {
+            "uuid": "1ce17f41-ccfc-4145-a498-b623a4b17bb7",
+            "username": "organiclion747",
+            "password": "conan",
+            "salt": "VX7WfsuP",
+            "md5": "204749c09caa5a63d09820b592216cbd",
+            "sha1": "022a81acbda98491fb312829a72ef46a398203f6",
+            "sha256": "577e10b1c4432866a87ca192ab4cd3409c7152e7d97e182544a89daa3a5bbcdf"
+        },
+        "dob": {
+            "date": "1965-12-01T07:55:33.355Z",
+            "age": 54
+        },
+        "registered": {
+            "date": "2005-03-06T22:53:59.288Z",
+            "age": 14
+        },
+        "phone": "062-70477484",
+        "cell": "0916-545-7271",
+        "id": {
+            "name": "",
+            "value": null
+        },
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/men/24.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/men/24.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/men/24.jpg"
+        },
+        "nat": "IR"
+    }, {
+        "gender": "male",
+        "name": {
+            "title": "Mr",
+            "first": "Aitor",
+            "last": "Vidal"
+        },
+        "location": {
+            "street": {
+                "number": 5649,
+                "name": "Avenida de La Albufera"
+            },
+            "city": "Elche",
+            "state": "Asturias",
+            "country": "Spain",
+            "postcode": 29724,
+            "coordinates": {
+                "latitude": "61.1862",
+                "longitude": "-32.8166"
+            },
+            "timezone": {
+                "offset": "+10:00",
+                "description": "Eastern Australia, Guam, Vladivostok"
+            }
+        },
+        "email": "Aitor.Vidal@example.com",
+        "login": {
+            "uuid": "1a878c3c-1640-4fe9-9323-9bd365e5d7b9",
+            "username": "lazypanda637",
+            "password": "stephanie",
+            "salt": "LUYoxw6u",
+            "md5": "d7b371647fd8bf39045f9946ddc24556",
+            "sha1": "3d855729d6947dd480cd487f73d1167401274479",
+            "sha256": "0a400018c30d69cbad3a806073049030ccc576f465fb2e082217228a6f1395c1"
+        },
+        "dob": {
+            "date": "1986-10-16T06:36:02.745Z",
+            "age": 33
+        },
+        "registered": {
+            "date": "2018-05-20T16:45:48.204Z",
+            "age": 1
+        },
+        "phone": "961-538-236",
+        "cell": "686-067-077",
+        "id": {
+            "name": "DNI",
+            "value": "03630878-C"
+        },
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/men/14.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/men/14.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/men/14.jpg"
+        },
+        "nat": "ES"
+    }, {
+        "gender": "female",
+        "name": {
+            "title": "Ms",
+            "first": "Brooke",
+            "last": "Garza"
+        },
+        "location": {
+            "street": {
+                "number": 3273,
+                "name": "South Street"
+            },
+            "city": "Ely",
+            "state": "Dumfries and Galloway",
+            "country": "United Kingdom",
+            "postcode": "D3 3ES",
+            "coordinates": {
+                "latitude": "50.2121",
+                "longitude": "152.2461"
+            },
+            "timezone": {
+                "offset": "+6:00",
+                "description": "Almaty, Dhaka, Colombo"
+            }
+        },
+        "email": "Brooke.Garza@example.com",
+        "login": {
+            "uuid": "29295d46-aea0-49c0-8c05-a51dbd19c24c",
+            "username": "blueostrich730",
+            "password": "99999999",
+            "salt": "FECGVssi",
+            "md5": "a41cbd83099e10ffc25798e6b2885e11",
+            "sha1": "ae896d385647894370e438755221b7079c7f5f12",
+            "sha256": "a317fa965692ebb90ba2607f73ecabbbc3b50dd839064602fe56a06037f50710"
+        },
+        "dob": {
+            "date": "1995-08-10T17:14:44.707Z",
+            "age": 24
+        },
+        "registered": {
+            "date": "2011-09-22T20:50:39.960Z",
+            "age": 8
+        },
+        "phone": "017683 03515",
+        "cell": "0787-477-451",
+        "id": {
+            "name": "NINO",
+            "value": "SJ 53 37 10 C"
+        },
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/women/81.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/women/81.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/women/81.jpg"
+        },
+        "nat": "GB"
+    }, {
+        "gender": "male",
+        "name": {
+            "title": "Mr",
+            "first": "ایلیا",
+            "last": "سلطانی نژاد"
+        },
+        "location": {
+            "street": {
+                "number": 5076,
+                "name": "جمهوری اسلامی"
+            },
+            "city": "مشهد",
+            "state": "گیلان",
+            "country": "Iran",
+            "postcode": 43577,
+            "coordinates": {
+                "latitude": "50.0485",
+                "longitude": "-62.1830"
+            },
+            "timezone": {
+                "offset": "-3:30",
+                "description": "Newfoundland"
+            }
+        },
+        "email": "yly.slTnynjd@example.com",
+        "login": {
+            "uuid": "b5488778-c442-403a-bf8d-bc5d6d187f5f",
+            "username": "brownmeercat350",
+            "password": "tbone",
+            "salt": "4rYXYh0w",
+            "md5": "d79a05a212291188d4dcc89accb9a362",
+            "sha1": "ecd2a9cf2d7b682bea3d1517841b47eb6905d419",
+            "sha256": "9e8c36181b1f095efa025995ebc4b1cc4a7418b8f2e7747be011895121c11c1c"
+        },
+        "dob": {
+            "date": "1986-09-23T04:23:43.109Z",
+            "age": 33
+        },
+        "registered": {
+            "date": "2008-02-20T10:47:41.949Z",
+            "age": 11
+        },
+        "phone": "013-25063829",
+        "cell": "0992-492-3936",
+        "id": {
+            "name": "",
+            "value": null
+        },
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/men/69.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/men/69.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/men/69.jpg"
+        },
+        "nat": "IR"
+    }, {
+        "gender": "female",
+        "name": {
+            "title": "Ms",
+            "first": "Elnaz",
+            "last": "Van Dam"
+        },
+        "location": {
+            "street": {
+                "number": 2780,
+                "name": "Gasselstraat"
+            },
+            "city": "Gelselaar",
+            "state": "Limburg",
+            "country": "Netherlands",
+            "postcode": 66963,
+            "coordinates": {
+                "latitude": "-25.9306",
+                "longitude": "-10.1497"
+            },
+            "timezone": {
+                "offset": "-5:00",
+                "description": "Eastern Time (US & Canada), Bogota, Lima"
+            }
+        },
+        "email": "Elnaz.VanDam@example.com",
+        "login": {
+            "uuid": "e7624df5-90a9-4087-86d2-baab52a650ae",
+            "username": "lazybird936",
+            "password": "xanadu",
+            "salt": "1G1sw78I",
+            "md5": "8015d2a8e2ccd0bf8006636de712c698",
+            "sha1": "50bda6c335ee981f670d465be81a8438e54e136d",
+            "sha256": "90402525948d016cf99483f94bade7c5e9d9beceee29ecedf869083eba81a710"
+        },
+        "dob": {
+            "date": "1958-12-04T18:36:56.418Z",
+            "age": 61
+        },
+        "registered": {
+            "date": "2013-03-16T23:44:34.203Z",
+            "age": 6
+        },
+        "phone": "(809)-907-7765",
+        "cell": "(244)-372-2168",
+        "id": {
+            "name": "BSN",
+            "value": "59519743"
+        },
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/women/60.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/women/60.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/women/60.jpg"
+        },
+        "nat": "NL"
+    }],
+    "info": {
+        "seed": "8ac51082b2a55648",
+        "results": 5,
+        "page": 1,
+        "version": "1.3"
+    }
+}
