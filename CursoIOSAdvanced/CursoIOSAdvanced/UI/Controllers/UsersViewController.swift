@@ -28,10 +28,15 @@ class UsersViewController: UIViewController {
     private var cellSpacing: CGFloat = 16.0
     private var users: Array<User> = []
     
+    private let refreshControlTableView = UIRefreshControl()
+    private let refreshControlCollectionView = UIRefreshControl()
+
     
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureRefreshControl()
         
         configure(tableView: tableView)
         configure(collectionView: collectionView)
@@ -40,25 +45,49 @@ class UsersViewController: UIViewController {
         loadUsers()
     }
     
+    private func configureRefreshControl() {
+        // Configure Refresh Control
+        refreshControlTableView.addTarget(self,
+                                          action: #selector(refreshUsers),
+                                          for: .valueChanged)
+        refreshControlCollectionView.addTarget(self,
+                                               action: #selector(refreshUsers),
+                                               for: .valueChanged)
+    }
+    
     private func loadOptionSelected() {
         segmentOptions.selectedSegmentIndex = DataManager.shared.optionSelected
     }
     
     private func loadUsers() {
-        DataManager.shared.users { [weak self] result in
-            switch result {
-                case .success(let data):
-                    guard let users = data as? Array<User> else {
-                        return
-                    }
-                
-                    self?.users = users
-                    self?.updateListType(optionSelected: self?.segmentOptions.selectedSegmentIndex)
-                    
-                case .failure(let msg):
-                    print(msg)
-            }
+        DataManager.shared.users(forceUpdate: false) { [weak self] result in
+            self?.parseUsers(result: result)
         }
+    }
+    
+    @objc private func refreshUsers() {
+        DataManager.shared.users(forceUpdate: true) { [weak self] result in
+            self?.parseUsers(result: result)
+        }
+    }
+    
+    private func parseUsers(result: ServiceResult) {
+        switch result {
+            case .success(let data):
+                guard let users = data as? Array<User> else {
+                    return
+                }
+            
+                self.users = users
+                updateListType(optionSelected:
+                segmentOptions.selectedSegmentIndex)
+                
+            case .failure(let msg):
+                print(msg)
+        }
+
+        refreshControlTableView.endRefreshing()
+        refreshControlCollectionView.endRefreshing()
     }
     
     private func updateListType(optionSelected: Int?) {
@@ -89,6 +118,8 @@ extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
                                               bottom: 0,
                                               right: 0)
         
+        tableView.refreshControl = refreshControlTableView
+        
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -107,7 +138,8 @@ extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
             let user = users[indexPath.row]
             cell.configureCell(image: user.avatar,
                                name: user.name,
-                               subtitle: user.email)
+                               subtitle: user.email,
+                               birthdate: user.birthdate)
         }
         
         return cell
@@ -127,6 +159,8 @@ extension UsersViewController: UICollectionViewDelegate, UICollectionViewDataSou
                                                    left: 0,
                                                    bottom: 0,
                                                    right: 0)
+        
+        collectionView.refreshControl = refreshControlCollectionView
         
         collectionView.dataSource = self
         collectionView.delegate = self

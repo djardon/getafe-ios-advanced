@@ -30,7 +30,40 @@ class DataManager {
     
     
     // MARK: - Public methods
-    func users(completion: @escaping ServiceCompletion) {
+    func users(forceUpdate: Bool, completion: @escaping ServiceCompletion) {
+        switch forceUpdate {
+            case true:
+                usersForceUpdate(completion: completion)
+
+            case false:
+                users(completion: completion)
+        }
+    }
+    
+    func user(by id: String, completion: @escaping ServiceCompletion) {
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            if let userDAO = DatabaseManager.shared.user(by: id) {
+                let user = self?.user(from: userDAO)
+                
+                DispatchQueue.main.async {
+                    completion(.success(data: user))
+                }
+            }
+            else {
+                DispatchQueue.main.async {
+                    completion(.failure(msg: "No se ha encontrado el usuario"))
+                }
+            }
+        }
+    }
+    
+    func save(optionSelected: Int) {
+        DatabaseManager.shared.save(option: optionSelected)
+    }
+
+        
+    // MARK: - Private methods
+    private func users(completion: @escaping ServiceCompletion) {
         DispatchQueue.global(qos: .background).async { [weak self] in
             if let users = self?.usersFromUsersDB, users.count > 0 {
                 // devolver userDB
@@ -46,7 +79,7 @@ class DataManager {
         }
     }
     
-    func usersForceUpdate(completion: @escaping ServiceCompletion) {
+    private func usersForceUpdate(completion: @escaping ServiceCompletion) {
         // Llamar al servicio para obtener nuevos usuarios
         DispatchQueue.global(qos: .background).async {
             ApiManager.shared.fetchUsers() { [weak self] result in
@@ -81,29 +114,6 @@ class DataManager {
         }
     }
     
-    func user(by id: String, completion: @escaping ServiceCompletion) {
-        DispatchQueue.global(qos: .background).async { [weak self] in
-            if let userDAO = DatabaseManager.shared.user(by: id) {
-                let user = self?.user(from: userDAO)
-                
-                DispatchQueue.main.async {
-                    completion(.success(data: user))
-                }
-            }
-            else {
-                DispatchQueue.main.async {
-                    completion(.failure(msg: "No se ha encontrado el usuario"))
-                }
-            }
-        }
-    }
-    
-    func save(optionSelected: Int) {
-        DatabaseManager.shared.save(option: optionSelected)
-    }
-
-        
-    // MARK: - Private methods
     private func save(users: UsersDTO) {
         guard let usersToSave = users.users else {
             return
