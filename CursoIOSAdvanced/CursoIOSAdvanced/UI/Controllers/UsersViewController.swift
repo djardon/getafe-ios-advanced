@@ -18,17 +18,10 @@ class UsersViewController: UIViewController {
     
     // Value changed
     @IBAction func onListTypePressed(_ sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex {
-            case 0:
-                tableView.isHidden = false
-                collectionView.isHidden = true
-                tableView.reloadData()
-                
-            default:
-                tableView.isHidden = true
-                collectionView.isHidden = false
-                collectionView.reloadData()
-        }
+        // Save selected option
+        DataManager.shared.save(optionSelected: sender.selectedSegmentIndex)
+        // Update selected list type view
+        updateListType(optionSelected: sender.selectedSegmentIndex)
     }
     
     // MARK: - Properties
@@ -43,7 +36,12 @@ class UsersViewController: UIViewController {
         configure(tableView: tableView)
         configure(collectionView: collectionView)
         
+        loadOptionSelected()
         loadUsers()
+    }
+    
+    private func loadOptionSelected() {
+        segmentOptions.selectedSegmentIndex = DataManager.shared.optionSelected
     }
     
     private func loadUsers() {
@@ -55,17 +53,25 @@ class UsersViewController: UIViewController {
                     }
                 
                     self?.users = users
-                    switch self?.segmentOptions.selectedSegmentIndex {
-                        case 0:
-                            self?.tableView.reloadData()
-                            
-                        default:
-                            self?.collectionView.reloadData()
-                    }
+                    self?.updateListType(optionSelected: self?.segmentOptions.selectedSegmentIndex)
                     
                 case .failure(let msg):
                     print(msg)
             }
+        }
+    }
+    
+    private func updateListType(optionSelected: Int?) {
+        switch optionSelected {
+            case 0:
+                tableView.isHidden = false
+                collectionView.isHidden = true
+                tableView.reloadData()
+                
+            default:
+                tableView.isHidden = true
+                collectionView.isHidden = false
+                collectionView.reloadData()
         }
     }
 }
@@ -78,7 +84,7 @@ extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.register(UINib(nibName: PersonTableViewCell.cellIdentifier,
                                  bundle: nil),
                            forCellReuseIdentifier: PersonTableViewCell.cellIdentifier)
-        tableView.contentInset = UIEdgeInsets(top: segmentOptions.frame.origin.y + segmentOptions.bounds.height,
+        tableView.contentInset = UIEdgeInsets(top: segmentOptions.frame.origin.y,
                                               left: 0,
                                               bottom: 0,
                                               right: 0)
@@ -117,7 +123,7 @@ extension UsersViewController: UICollectionViewDelegate, UICollectionViewDataSou
                                       bundle: nil),
                                 forCellWithReuseIdentifier: PersonCollectionViewCell.cellIdentifier)
         
-        collectionView.contentInset = UIEdgeInsets(top:  segmentOptions.frame.origin.y + segmentOptions.bounds.height,
+        collectionView.contentInset = UIEdgeInsets(top:  segmentOptions.frame.origin.y,
                                                    left: 0,
                                                    bottom: 0,
                                                    right: 0)
