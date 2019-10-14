@@ -22,16 +22,7 @@ class ApiManager {
     private init() {}
     
     private let numUsers: Int = 100
-
-    
-    func fetchUsers(completion: ServiceCompletion) {
-        // Llamar al servicio
-        
-        // Devolver datos
-        completion(.success(data: testLoadUsersJson()))
-    }
-    
-    private func testLoadUsersJson() -> UsersDTO? {
+    private var testLoadUsersJson: UsersDTO? {
         if let path = Bundle.main.path(forResource: "users", ofType: "json") {
             do {
                 let jsonData = try Data(contentsOf: URL(fileURLWithPath: path))
@@ -52,5 +43,12 @@ class ApiManager {
             print("Invalid filename/path.")
             return nil
         }
+    }
+    
+    func fetchUsers(completion: ServiceCompletion) {
+        // Llamar al servicio
+        
+        // Devolver datos
+        completion(.success(data: testLoadUsersJson))
     }
 }
