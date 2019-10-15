@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Alamofire
+
 
 enum ServiceResult {
     case success(data: Any?)
@@ -21,7 +23,13 @@ class ApiManager {
     static let shared = ApiManager()
     private init() {}
     
-    private let numUsers: Int = 100
+    // Properties
+    private let url_users = "https://randomuser.me/api/"
+    private let serviceKeyResults = "results"
+    private let serviceResultsCount = 5000
+    private let serviceResultDateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+    
+
     private var testLoadUsersJson: UsersDTO? {
         if let path = Bundle.main.path(forResource: "users", ofType: "json") {
             do {
@@ -29,7 +37,7 @@ class ApiManager {
                 
                 let decoder = JSONDecoder()
                 let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+                dateFormatter.dateFormat = serviceResultDateFormat
                 decoder.dateDecodingStrategy = .formatted(dateFormatter)
                 
                 return try decoder.decode(UsersDTO.self, from: jsonData)
@@ -45,10 +53,27 @@ class ApiManager {
         }
     }
     
-    func fetchUsers(completion: ServiceCompletion) {
+    func fetchUsers(completion: @escaping ServiceCompletion) {
         // Llamar al servicio
-        
-        // Devolver datos
-        completion(.success(data: testLoadUsersJson))
+        Alamofire.request(url_users,
+                          method: .get,
+                          parameters: [serviceKeyResults: serviceResultsCount],
+                          encoding: URLEncoding.queryString).response { [weak self] response in
+            if let responseData = response.data {
+                let decoder = JSONDecoder()
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = self?.serviceResultDateFormat
+                decoder.dateDecodingStrategy = .formatted(dateFormatter)
+                
+                let users: UsersDTO? = try? decoder.decode(UsersDTO.self, from: responseData)
+                let usersOrdered = users?.users?.sorted(by: { $0.dob?.age ?? 0 < $1.dob?.age ?? 0 })
+                
+                completion(.success(data: UsersDTO(users: usersOrdered,
+                                                   info: users?.info)))
+            }
+            else {
+                completion(.failure(msg: "Error en petición al servicio"))
+            }
+        }
     }
 }
