@@ -39,6 +39,8 @@
 		0F5781E72347CADF008376DD /* StreetDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5781E62347CADF008376DD /* StreetDTO.swift */; };
 		0F5781E92347CC6D008376DD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5781E82347CC6D008376DD /* DataManager.swift */; };
 		0F67C746234CEE8D0057394D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F67C745234CEE8D0057394D /* User.swift */; };
+		0F99477B2358E29000B998A6 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F99477A2358E29000B998A6 /* Detail.storyboard */; };
+		0F99477D2358E3DB00B998A6 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F99477C2358E3DB00B998A6 /* UserDetailViewController.swift */; };
 		DEA0DA86558E3E5277A9B952 /* Pods_CursoIOSAdvanced.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5600CFB193B50E21864254 /* Pods_CursoIOSAdvanced.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +79,8 @@
 		0F5781E62347CADF008376DD /* StreetDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetDTO.swift; sourceTree = "<group>"; };
 		0F5781E82347CC6D008376DD /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		0F67C745234CEE8D0057394D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0F99477A2358E29000B998A6 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		0F99477C2358E3DB00B998A6 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		6BD80344196F49C9E9FF7F3F /* Pods-CursoIOSAdvanced.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CursoIOSAdvanced.debug.xcconfig"; path = "Target Support Files/Pods-CursoIOSAdvanced/Pods-CursoIOSAdvanced.debug.xcconfig"; sourceTree = "<group>"; };
 		DF51D06A32F7A00D18B1B214 /* Pods-CursoIOSAdvanced.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CursoIOSAdvanced.release.xcconfig"; path = "Target Support Files/Pods-CursoIOSAdvanced/Pods-CursoIOSAdvanced.release.xcconfig"; sourceTree = "<group>"; };
 		FE5600CFB193B50E21864254 /* Pods_CursoIOSAdvanced.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CursoIOSAdvanced.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +174,7 @@
 			children = (
 				0F4E3D17234523E2005DFA5F /* SplashViewController.swift */,
 				0F571BCC23465115000BB376 /* UsersViewController.swift */,
+				0F99477C2358E3DB00B998A6 /* UserDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 				0F4E3D1E234523E3005DFA5F /* LaunchScreen.storyboard */,
 				0F571BD023465226000BB376 /* Splash.storyboard */,
 				0F4E3D19234523E2005DFA5F /* Main.storyboard */,
+				0F99477A2358E29000B998A6 /* Detail.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -343,6 +349,7 @@
 			files = (
 				0F4E3D20234523E3005DFA5F /* LaunchScreen.storyboard in Resources */,
 				0F571BDD2346698E000BB376 /* PersonCollectionViewCell.xib in Resources */,
+				0F99477B2358E29000B998A6 /* Detail.storyboard in Resources */,
 				0F4E3D1D234523E3005DFA5F /* Assets.xcassets in Resources */,
 				0F5781C7234796E8008376DD /* loading_animation.json in Resources */,
 				0F540AA8234E518100747252 /* users.json in Resources */,
@@ -422,6 +429,7 @@
 				0F5781DF2347C828008376DD /* LocationDTO.swift in Sources */,
 				0F4E3D16234523E2005DFA5F /* SceneDelegate.swift in Sources */,
 				0F67C746234CEE8D0057394D /* User.swift in Sources */,
+				0F99477D2358E3DB00B998A6 /* UserDetailViewController.swift in Sources */,
 				0F10F41B234BAEB600E08903 /* ApiManager.swift in Sources */,
 				0F5781D12347C0E3008376DD /* InfoDTO.swift in Sources */,
 				0F5781D52347C7A1008376DD /* DobDTO.swift in Sources */,

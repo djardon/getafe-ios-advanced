@@ -25,6 +25,7 @@ class UsersViewController: UIViewController {
     }
     
     // MARK: - Properties
+    private let segueToDetail = "SegueMainToDetail"
     private var cellSpacing: CGFloat = 16.0
     private var users: Array<User> = []
     
@@ -144,6 +145,11 @@ extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: segueToDetail,
+                     sender: indexPath)
+    }
 }
 
 
@@ -198,5 +204,23 @@ extension UsersViewController: UICollectionViewDelegate, UICollectionViewDataSou
         let size = (collectionView.frame.size.width - cellSpacing) / 2
         return CGSize(width: size,
                       height: size)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: segueToDetail,
+                     sender: indexPath)
+    }
+}
+
+// MARK: - Navigation
+extension UsersViewController {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? UserDetailViewController,
+              let indexPath = sender as? IndexPath else {
+            return
+        }
+        
+        destination.user = users[indexPath.row]
     }
 }
