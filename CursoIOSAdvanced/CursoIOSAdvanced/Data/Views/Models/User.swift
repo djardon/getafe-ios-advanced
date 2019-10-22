@@ -16,8 +16,6 @@ class User {
     let lastName: String?
     let email: String?
     let birthdate: Date?
-    let country: String?
-    let nationality: String?
     
     var name: String {
         var userName = ""
@@ -32,19 +30,12 @@ class User {
         return "\(userName)"
     }
     
-    var age: Int {
-        guard let date = birthdate,
-              let yearAge = Calendar.current.dateComponents([.year],
-                                                                  from: date, to: Date()).year else {
-            return 0
-        }
-        
-        return yearAge
-    }
-    
-    
-    
-    init(id: String, avatar: String? = nil, firstName: String? = nil, lastName: String? = nil, email: String? = nil, birthdate: Date? = nil, country: String? = nil, nationality: String? = nil) {
+    init(id: String,
+         avatar: String? = nil,
+         firstName: String? = nil,
+         lastName: String? = nil,
+         email: String? = nil,
+         birthdate: Date? = nil) {
         
         self.id = id
         self.avatar = avatar
@@ -52,8 +43,5 @@ class User {
         self.lastName = lastName
         self.email = email
         self.birthdate = birthdate
-        self.country = country
-        self.nationality = nationality
     }
-    
 }

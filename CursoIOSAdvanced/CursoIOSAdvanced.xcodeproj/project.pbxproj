@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0F10F41B234BAEB600E08903 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F10F41A234BAEB600E08903 /* ApiManager.swift */; };
+		0F356063235E1D5C0017B96E /* UserDetailDataViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F356061235E1D5C0017B96E /* UserDetailDataViewCell.swift */; };
+		0F356064235E1D5C0017B96E /* UserDetailDataViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F356062235E1D5C0017B96E /* UserDetailDataViewCell.xib */; };
+		0F356067235E1D700017B96E /* UserDetailContactViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F356065235E1D700017B96E /* UserDetailContactViewCell.swift */; };
+		0F356068235E1D700017B96E /* UserDetailContactViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F356066235E1D700017B96E /* UserDetailContactViewCell.xib */; };
+		0F35606B235E1D8B0017B96E /* UserDetailLocationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F356069235E1D8B0017B96E /* UserDetailLocationViewCell.swift */; };
+		0F35606C235E1D8B0017B96E /* UserDetailLocationViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F35606A235E1D8B0017B96E /* UserDetailLocationViewCell.xib */; };
+		0F35606F235E1D9A0017B96E /* UserDetailMapViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35606D235E1D9A0017B96E /* UserDetailMapViewCell.swift */; };
+		0F356070235E1D9A0017B96E /* UserDetailMapViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F35606E235E1D9A0017B96E /* UserDetailMapViewCell.xib */; };
+		0F356072235E28730017B96E /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F356071235E28730017B96E /* UserDetail.swift */; };
 		0F4E3D14234523E2005DFA5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4E3D13234523E2005DFA5F /* AppDelegate.swift */; };
 		0F4E3D16234523E2005DFA5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4E3D15234523E2005DFA5F /* SceneDelegate.swift */; };
 		0F4E3D18234523E2005DFA5F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4E3D17234523E2005DFA5F /* SplashViewController.swift */; };
@@ -46,6 +55,15 @@
 
 /* Begin PBXFileReference section */
 		0F10F41A234BAEB600E08903 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		0F356061235E1D5C0017B96E /* UserDetailDataViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailDataViewCell.swift; sourceTree = "<group>"; };
+		0F356062235E1D5C0017B96E /* UserDetailDataViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailDataViewCell.xib; sourceTree = "<group>"; };
+		0F356065235E1D700017B96E /* UserDetailContactViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailContactViewCell.swift; sourceTree = "<group>"; };
+		0F356066235E1D700017B96E /* UserDetailContactViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailContactViewCell.xib; sourceTree = "<group>"; };
+		0F356069235E1D8B0017B96E /* UserDetailLocationViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailLocationViewCell.swift; sourceTree = "<group>"; };
+		0F35606A235E1D8B0017B96E /* UserDetailLocationViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailLocationViewCell.xib; sourceTree = "<group>"; };
+		0F35606D235E1D9A0017B96E /* UserDetailMapViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailMapViewCell.swift; sourceTree = "<group>"; };
+		0F35606E235E1D9A0017B96E /* UserDetailMapViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailMapViewCell.xib; sourceTree = "<group>"; };
+		0F356071235E28730017B96E /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
 		0F4E3D10234523E2005DFA5F /* CursoIOSAdvanced.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CursoIOSAdvanced.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4E3D13234523E2005DFA5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F4E3D15234523E2005DFA5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -197,6 +215,14 @@
 				0F571BD3234662AC000BB376 /* PersonTableViewCell.xib */,
 				0F571BDA2346698E000BB376 /* PersonCollectionViewCell.swift */,
 				0F571BDB2346698E000BB376 /* PersonCollectionViewCell.xib */,
+				0F356061235E1D5C0017B96E /* UserDetailDataViewCell.swift */,
+				0F356062235E1D5C0017B96E /* UserDetailDataViewCell.xib */,
+				0F356065235E1D700017B96E /* UserDetailContactViewCell.swift */,
+				0F356066235E1D700017B96E /* UserDetailContactViewCell.xib */,
+				0F356069235E1D8B0017B96E /* UserDetailLocationViewCell.swift */,
+				0F35606A235E1D8B0017B96E /* UserDetailLocationViewCell.xib */,
+				0F35606D235E1D9A0017B96E /* UserDetailMapViewCell.swift */,
+				0F35606E235E1D9A0017B96E /* UserDetailMapViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -266,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				0F67C745234CEE8D0057394D /* User.swift */,
+				0F356071235E28730017B96E /* UserDetail.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -353,8 +380,12 @@
 				0F4E3D1D234523E3005DFA5F /* Assets.xcassets in Resources */,
 				0F5781C7234796E8008376DD /* loading_animation.json in Resources */,
 				0F540AA8234E518100747252 /* users.json in Resources */,
+				0F356068235E1D700017B96E /* UserDetailContactViewCell.xib in Resources */,
 				0F4E3D1B234523E2005DFA5F /* Main.storyboard in Resources */,
 				0F571BCE23465226000BB376 /* Splash.storyboard in Resources */,
+				0F35606C235E1D8B0017B96E /* UserDetailLocationViewCell.xib in Resources */,
+				0F356070235E1D9A0017B96E /* UserDetailMapViewCell.xib in Resources */,
+				0F356064235E1D5C0017B96E /* UserDetailDataViewCell.xib in Resources */,
 				0F571BD5234662AC000BB376 /* PersonTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,20 +445,25 @@
 				0F5781D32347C252008376DD /* UserDTO.swift in Sources */,
 				0F5781E72347CADF008376DD /* StreetDTO.swift in Sources */,
 				0F5781CB2347B683008376DD /* UserDAO.swift in Sources */,
+				0F356067235E1D700017B96E /* UserDetailContactViewCell.swift in Sources */,
 				0F5781CF2347BEEE008376DD /* UsersDTO.swift in Sources */,
 				0F5781E32347C862008376DD /* TimezoneDTO.swift in Sources */,
 				0F5781DB2347C7FB008376DD /* CoordinatesDTO.swift in Sources */,
 				0F5781E12347C841008376DD /* LoginDTO.swift in Sources */,
 				0F5781E92347CC6D008376DD /* DataManager.swift in Sources */,
+				0F35606F235E1D9A0017B96E /* UserDetailMapViewCell.swift in Sources */,
+				0F356072235E28730017B96E /* UserDetail.swift in Sources */,
 				0F4E3D14234523E2005DFA5F /* AppDelegate.swift in Sources */,
 				0F56CAE3234B890F00C34A67 /* DatabaseManager.swift in Sources */,
 				0F5781D72347C7AF008376DD /* NameDTO.swift in Sources */,
 				0F571BD923466583000BB376 /* UIView+Utils.swift in Sources */,
 				0F5781DD2347C814008376DD /* IdDTO.swift in Sources */,
+				0F356063235E1D5C0017B96E /* UserDetailDataViewCell.swift in Sources */,
 				0F571BDC2346698E000BB376 /* PersonCollectionViewCell.swift in Sources */,
 				0F5781D92347C7D0008376DD /* PictureDTO.swift in Sources */,
 				0F5781DF2347C828008376DD /* LocationDTO.swift in Sources */,
 				0F4E3D16234523E2005DFA5F /* SceneDelegate.swift in Sources */,
+				0F35606B235E1D8B0017B96E /* UserDetailLocationViewCell.swift in Sources */,
 				0F67C746234CEE8D0057394D /* User.swift in Sources */,
 				0F99477D2358E3DB00B998A6 /* UserDetailViewController.swift in Sources */,
 				0F10F41B234BAEB600E08903 /* ApiManager.swift in Sources */,

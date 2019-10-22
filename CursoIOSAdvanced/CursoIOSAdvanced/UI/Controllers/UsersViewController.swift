@@ -104,6 +104,13 @@ class UsersViewController: UIViewController {
                 collectionView.reloadData()
         }
     }
+    
+    private func edgesInsetsDistance(view: UIView) -> UIEdgeInsets {
+        return UIEdgeInsets(top: (segmentOptions.frame.origin.y - view.frame.origin.y) + segmentOptions.frame.size.height + cellSpacing,
+                            left: 0,
+                            bottom: 0,
+                            right: 0)
+    }
 }
 
 
@@ -114,11 +121,8 @@ extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.register(UINib(nibName: PersonTableViewCell.cellIdentifier,
                                  bundle: nil),
                            forCellReuseIdentifier: PersonTableViewCell.cellIdentifier)
-        tableView.contentInset = UIEdgeInsets(top: segmentOptions.frame.origin.y,
-                                              left: 0,
-                                              bottom: 0,
-                                              right: 0)
-        
+       
+        tableView.contentInset = edgesInsetsDistance(view: tableView)
         tableView.refreshControl = refreshControlTableView
         
         tableView.dataSource = self
@@ -139,7 +143,7 @@ extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
             let user = users[indexPath.row]
             cell.configureCell(image: user.avatar,
                                name: user.name,
-                               subtitle: user.email,
+                               email: user.email,
                                birthdate: user.birthdate)
         }
         
@@ -147,8 +151,7 @@ extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: segueToDetail,
-                     sender: indexPath)
+        navigate(to: indexPath)
     }
 }
 
@@ -161,11 +164,7 @@ extension UsersViewController: UICollectionViewDelegate, UICollectionViewDataSou
                                       bundle: nil),
                                 forCellWithReuseIdentifier: PersonCollectionViewCell.cellIdentifier)
         
-        collectionView.contentInset = UIEdgeInsets(top:  segmentOptions.frame.origin.y,
-                                                   left: 0,
-                                                   bottom: 0,
-                                                   right: 0)
-        
+        collectionView.contentInset = edgesInsetsDistance(view: collectionView)
         collectionView.refreshControl = refreshControlCollectionView
         
         collectionView.dataSource = self
@@ -207,20 +206,39 @@ extension UsersViewController: UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: segueToDetail,
-                     sender: indexPath)
+        navigate(to: indexPath)
     }
 }
 
 // MARK: - Navigation
 extension UsersViewController {
     
+    private func navigate(to indexPath: IndexPath) {
+        let user = users[indexPath.row]
+        
+        DataManager.shared.userDetail(by: user.id) { [weak self] result in
+            switch result {
+                case .success(let data):
+                    guard let userDetail = data as? UserDetail,
+                          let segueIdentifier = self?.segueToDetail else {
+                        return
+                    }
+
+                    self?.performSegue(withIdentifier: segueIdentifier,
+                                       sender: userDetail)
+                
+                case .failure(let msg):
+                    print(msg)
+            }
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destination = segue.destination as? UserDetailViewController,
-              let indexPath = sender as? IndexPath else {
+              let userDetail = sender as? UserDetail else {
             return
         }
         
-        destination.user = users[indexPath.row]
+        destination.user = userDetail
     }
 }

@@ -44,6 +44,7 @@
                         <viewLayoutGuide key="safeArea" id="Jew-AU-V28"/>
                     </view>
                     <connections>
+                        <outlet property="buttonDelete" destination="Z2I-bd-eli" id="J2z-La-hVK"/>
                         <outlet property="tableView" destination="ZzO-7d-mZK" id="MxS-FI-DAg"/>
                     </connections>
                 </viewController>

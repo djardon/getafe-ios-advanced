@@ -61,6 +61,22 @@ class DataManager {
         DatabaseManager.shared.save(option: optionSelected)
     }
 
+    func userDetail(by id: String, completion: @escaping ServiceCompletion) {
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            if let userDAO = DatabaseManager.shared.user(by: id) {
+                let userDetail = self?.userDetail(from: userDAO)
+                
+                DispatchQueue.main.async {
+                    completion(.success(data: userDetail))
+                }
+            }
+            else {
+                DispatchQueue.main.async {
+                    completion(.failure(msg: "No se ha encontrado el usuario"))
+                }
+            }
+        }
+    }
         
     // MARK: - Private methods
     private func users(completion: @escaping ServiceCompletion) {
@@ -132,9 +148,14 @@ class DataManager {
                              firstname: user.name?.first,
                              lastname: user.name?.last,
                              email: user.email,
+                             cell: user.cell,
+                             mobile: user.phone,
                              gender: user.gender,
                              birthdate: user.dob?.date,
                              country: user.location?.country,
+                             state: user.location?.state,
+                             city: user.location?.city,
+                             street: user.location?.street?.name,
                              nationality: user.nat,
                              latitude: user.location?.coordinates?.latitude,
                              longitude: user.location?.coordinates?.longitude)
@@ -154,8 +175,25 @@ class DataManager {
                     firstName: userDAO.firstname,
                     lastName: userDAO.lastname,
                     email: userDAO.email,
-                    birthdate: userDAO.birthdate,
-                    country: userDAO.country,
-                    nationality: userDAO.nationality)
+                    birthdate: userDAO.birthdate)
+    }
+    
+    private func userDetail(from userDAO: UserDAO) -> UserDetail {
+        return UserDetail(id: userDAO.uuid,
+                          avatar: userDAO.avatar,
+                          firstName: userDAO.firstname,
+                          lastName: userDAO.lastname,
+                          gender: userDAO.gender,
+                          birthdate: userDAO.birthdate,
+                          email: userDAO.email,
+                          cell: userDAO.cell,
+                          mobile: userDAO.mobile,
+                          country: userDAO.country,
+                          state: userDAO.state,
+                          city: userDAO.city,
+                          street: userDAO.street,
+                          nationality: userDAO.nationality,
+                          latitude: userDAO.latitude,
+                          longitude: userDAO.longitude)
     }
 }
