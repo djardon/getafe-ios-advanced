@@ -14,12 +14,20 @@ class UserDetailViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func onActionPressed(_ sender: UIButton) {
+        guard let userName = user?.name else {
+            return
+        }
+        
         // Delete user ang go back
-        let alert = UIAlertController(title: "Eliminar el usuario",
-                                      message: "Vas a eliminar a \(String(describing: user?.name)), ¿estás seguro?",
+        let alert = UIAlertController(title: NSLocalizedString("alert_delete_user_title",
+                                                               comment: ""),
+                                      message: String(format: NSLocalizedString("msg_delete_user",
+                                                                                comment: ""),
+                                                      userName),
                                       preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "eliminar",
+        alert.addAction(UIAlertAction(title: NSLocalizedString("txt_delete",
+                                                               comment: ""),
                                       style: .destructive,
                                       handler: {[weak self] _ in
             guard let userId = self?.user?.id else {
@@ -31,7 +39,8 @@ class UserDetailViewController: UIViewController {
             }
         }))
         
-        alert.addAction(UIAlertAction(title: "cancelar",
+        alert.addAction(UIAlertAction(title: NSLocalizedString("txt_cancel",
+                                                               comment: ""),
                                       style: .cancel))
         
         present(alert, animated: true)

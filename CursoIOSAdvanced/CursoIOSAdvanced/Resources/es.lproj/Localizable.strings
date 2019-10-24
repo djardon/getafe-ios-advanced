@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  CursoIOSAdvanced
+
+  Created by David Jardon on 24/10/2019.
+  Copyright © 2019 David Jardon. All rights reserved.
+*/
+
+"alert_delete_user_title" = "Eliminar el usuario";
+"msg_delete_user" = "Vas a eliminar a %@, ¿estás seguro?";
+"txt_delete" = "eliminar";
+"txt_cancel" = "cancelar";
