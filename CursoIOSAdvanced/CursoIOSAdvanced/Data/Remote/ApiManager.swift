@@ -26,7 +26,7 @@ class ApiManager {
     // Properties
     private let url_users = "https://randomuser.me/api/"
     private let serviceKeyResults = "results"
-    private let serviceResultsCount = 5000
+    private let serviceResultsCount = 50
     private let serviceResultDateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
     
 
@@ -66,7 +66,8 @@ class ApiManager {
                 decoder.dateDecodingStrategy = .formatted(dateFormatter)
                 
                 let users: UsersDTO? = try? decoder.decode(UsersDTO.self, from: responseData)
-                let usersOrdered = users?.users?.sorted(by: { $0.dob?.age ?? 0 < $1.dob?.age ?? 0 })
+                let usersOrdered = users?.users
+                //?.sorted(by: { $0.dob?.age ?? 0 < $1.dob?.age ?? 0 })
                 
                 completion(.success(data: UsersDTO(users: usersOrdered,
                                                    info: users?.info)))

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +20,7 @@
                         <rect key="frame" x="8" y="8" width="134" height="134"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w5Z-EC-rjD">
-                                <rect key="frame" x="8" y="8" width="118" height="118"/>
+                                <rect key="frame" x="0.0" y="0.0" width="134" height="134"/>
                             </imageView>
                             <view alpha="0.89999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPX-3l-hyK">
                                 <rect key="frame" x="0.0" y="104" width="134" height="30"/>
@@ -43,12 +43,12 @@
                             <constraint firstAttribute="bottom" secondItem="hPX-3l-hyK" secondAttribute="bottom" id="8Zo-sa-5sA"/>
                             <constraint firstItem="9To-Ve-4fP" firstAttribute="leading" secondItem="yAz-Fs-4tq" secondAttribute="leading" constant="4" id="DvE-A1-R04"/>
                             <constraint firstAttribute="trailing" secondItem="hPX-3l-hyK" secondAttribute="trailing" id="MLr-xR-TqZ"/>
-                            <constraint firstAttribute="trailing" secondItem="w5Z-EC-rjD" secondAttribute="trailing" constant="8" id="Tcp-VD-GKb"/>
+                            <constraint firstAttribute="trailing" secondItem="w5Z-EC-rjD" secondAttribute="trailing" id="Tcp-VD-GKb"/>
                             <constraint firstItem="hPX-3l-hyK" firstAttribute="leading" secondItem="yAz-Fs-4tq" secondAttribute="leading" id="eMI-XL-MBz"/>
-                            <constraint firstItem="w5Z-EC-rjD" firstAttribute="top" secondItem="yAz-Fs-4tq" secondAttribute="top" constant="8" id="iot-my-Wvx"/>
-                            <constraint firstItem="w5Z-EC-rjD" firstAttribute="leading" secondItem="yAz-Fs-4tq" secondAttribute="leading" constant="8" id="nZ3-1c-ETz"/>
+                            <constraint firstItem="w5Z-EC-rjD" firstAttribute="top" secondItem="yAz-Fs-4tq" secondAttribute="top" id="iot-my-Wvx"/>
+                            <constraint firstItem="w5Z-EC-rjD" firstAttribute="leading" secondItem="yAz-Fs-4tq" secondAttribute="leading" id="nZ3-1c-ETz"/>
                             <constraint firstItem="9To-Ve-4fP" firstAttribute="centerY" secondItem="hPX-3l-hyK" secondAttribute="centerY" id="xIe-wc-nAI"/>
-                            <constraint firstAttribute="bottom" secondItem="w5Z-EC-rjD" secondAttribute="bottom" constant="8" id="yHK-Ou-lg7"/>
+                            <constraint firstAttribute="bottom" secondItem="w5Z-EC-rjD" secondAttribute="bottom" id="yHK-Ou-lg7"/>
                         </constraints>
                     </view>
                 </subviews>

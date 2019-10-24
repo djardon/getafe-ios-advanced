@@ -26,7 +26,7 @@ class DatabaseManager {
 // MARK: - Realm
 extension DatabaseManager {
     var users: Results<UserDAO> {
-        return realm.objects(UserDAO.self)
+        return realm.objects(UserDAO.self).sorted(byKeyPath: "birthdate", ascending: false)
     }
     
     func save(user: UserDAO) {

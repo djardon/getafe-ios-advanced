@@ -28,6 +28,7 @@ class PersonCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        mImage.layer.cornerRadius = 8.0
         mView.layer.cornerRadius = 8.0
         mView.configureShadows()
         

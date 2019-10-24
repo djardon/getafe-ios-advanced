@@ -14,7 +14,27 @@ class UserDetailViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func onActionPressed(_ sender: UIButton) {
+        // Delete user ang go back
+        let alert = UIAlertController(title: "Eliminar el usuario",
+                                      message: "Vas a eliminar a \(String(describing: user?.name)), ¿estás seguro?",
+                                      preferredStyle: .alert)
         
+        alert.addAction(UIAlertAction(title: "eliminar",
+                                      style: .destructive,
+                                      handler: {[weak self] _ in
+            guard let userId = self?.user?.id else {
+                return
+            }
+                                        
+            DataManager.shared.delete(user: userId) { _ in
+                self?.navigationController?.popViewController(animated: true)
+            }
+        }))
+        
+        alert.addAction(UIAlertAction(title: "cancelar",
+                                      style: .cancel))
+        
+        present(alert, animated: true)
     }
     
     

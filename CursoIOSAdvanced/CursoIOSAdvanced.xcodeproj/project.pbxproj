@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F10F41B234BAEB600E08903 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F10F41A234BAEB600E08903 /* ApiManager.swift */; };
+		0F1AA0582361D5340000EC7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F1AA0572361D5340000EC7A /* GoogleService-Info.plist */; };
 		0F356063235E1D5C0017B96E /* UserDetailDataViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F356061235E1D5C0017B96E /* UserDetailDataViewCell.swift */; };
 		0F356064235E1D5C0017B96E /* UserDetailDataViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F356062235E1D5C0017B96E /* UserDetailDataViewCell.xib */; };
 		0F356067235E1D700017B96E /* UserDetailContactViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F356065235E1D700017B96E /* UserDetailContactViewCell.swift */; };
@@ -55,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		0F10F41A234BAEB600E08903 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		0F1AA0572361D5340000EC7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0F356061235E1D5C0017B96E /* UserDetailDataViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailDataViewCell.swift; sourceTree = "<group>"; };
 		0F356062235E1D5C0017B96E /* UserDetailDataViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailDataViewCell.xib; sourceTree = "<group>"; };
 		0F356065235E1D700017B96E /* UserDetailContactViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailContactViewCell.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				0F4E3D21234523E3005DFA5F /* Info.plist */,
+				0F1AA0572361D5340000EC7A /* GoogleService-Info.plist */,
 				0F571BC42346444F000BB376 /* App */,
 				0F571BC52346445D000BB376 /* Resources */,
 				0F571BD72346656E000BB376 /* Extensions */,
@@ -326,6 +329,7 @@
 				0F4E3D0D234523E2005DFA5F /* Frameworks */,
 				0F4E3D0E234523E2005DFA5F /* Resources */,
 				17072B46C8818F3DFAAD81A4 /* [CP] Embed Pods Frameworks */,
+				0FE4F9E32360D6380051D294 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -387,12 +391,30 @@
 				0F356070235E1D9A0017B96E /* UserDetailMapViewCell.xib in Resources */,
 				0F356064235E1D5C0017B96E /* UserDetailDataViewCell.xib in Resources */,
 				0F571BD5234662AC000BB376 /* PersonTableViewCell.xib in Resources */,
+				0F1AA0582361D5340000EC7A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0FE4F9E32360D6380051D294 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Fabric/run\"\n";
+		};
 		17072B46C8818F3DFAAD81A4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -622,6 +644,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CursoIOSAdvanced/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -640,6 +663,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CursoIOSAdvanced/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

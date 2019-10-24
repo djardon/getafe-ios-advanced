@@ -30,6 +30,7 @@ class PersonTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        mImage.layer.cornerRadius = mImage.frame.width / 2
         mView.layer.cornerRadius = 8.0
         mView.configureShadows()
     }
