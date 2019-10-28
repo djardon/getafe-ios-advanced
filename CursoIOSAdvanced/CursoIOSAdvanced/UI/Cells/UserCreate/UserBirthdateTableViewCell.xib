@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="UserBirthdateTableViewCell" rowHeight="171" id="KGk-i7-Jjw" customClass="UserBirthdateTableViewCell" customModule="CursoIOSAdvanced" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="175"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="175"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kMs-YH-tU8">
+                        <rect key="frame" x="12" y="12" width="296" height="151"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="O14-Ga-tcu">
+                                <rect key="frame" x="8" y="8" width="280" height="135"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthdate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ups-ix-aLw">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="zB8-3w-nAb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
+                                        <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXm-rK-Q7B">
+                                        <rect key="frame" x="0.0" y="21" width="280" height="114"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="25986745.920546055">
+                                            <!--2001-10-28 18:32:25 +0000-->
+                                        </date>
+                                    </datePicker>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="O14-Ga-tcu" secondAttribute="bottom" constant="8" id="MK1-DZ-cC3"/>
+                            <constraint firstItem="O14-Ga-tcu" firstAttribute="top" secondItem="kMs-YH-tU8" secondAttribute="top" constant="8" id="Tm9-zV-863"/>
+                            <constraint firstAttribute="trailing" secondItem="O14-Ga-tcu" secondAttribute="trailing" constant="8" id="kcr-p8-cxz"/>
+                            <constraint firstItem="O14-Ga-tcu" firstAttribute="leading" secondItem="kMs-YH-tU8" secondAttribute="leading" constant="8" id="vvx-66-wMs"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="kMs-YH-tU8" secondAttribute="bottom" constant="12" id="Dq7-tm-4VB"/>
+                    <constraint firstItem="kMs-YH-tU8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="UUh-0j-Ok4"/>
+                    <constraint firstItem="kMs-YH-tU8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="W3q-Ml-xXj"/>
+                    <constraint firstAttribute="trailing" secondItem="kMs-YH-tU8" secondAttribute="trailing" constant="12" id="lyZ-eP-wzG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="datePicker" destination="rXm-rK-Q7B" id="4T5-iM-F0I"/>
+                <outlet property="view" destination="kMs-YH-tU8" id="LF0-ra-Rkx"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="82.03125"/>
+        </tableViewCell>
+    </objects>
+</document>

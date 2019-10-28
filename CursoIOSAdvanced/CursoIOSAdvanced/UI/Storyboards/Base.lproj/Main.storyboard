@@ -58,6 +58,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Users" id="xhE-pf-lWh">
                         <barButtonItem key="backBarButtonItem" title=" " id="4O4-82-Xta"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="UJG-SP-sqs">
+                            <connections>
+                                <segue destination="PwP-mH-6N6" kind="show" id="ttm-4w-bOn"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="4l0-oi-O1j" id="LZr-3g-oRl"/>
@@ -70,6 +75,16 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="108.48214285714285"/>
         </scene>
+        <!--AddUser-->
+        <scene sceneID="HmC-MB-C5L">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddUser" id="PwP-mH-6N6" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="JBh-l8-LvN"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cTQ-eq-y3g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1759" y="35"/>
+        </scene>
         <!--Detail-->
         <scene sceneID="mEg-hg-mhu">
             <objects>
@@ -78,7 +93,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ro-hx-dU3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1771.0144927536232" y="107.8125"/>
+            <point key="canvasLocation" x="1771" y="194"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3Sy-oF-UW3">

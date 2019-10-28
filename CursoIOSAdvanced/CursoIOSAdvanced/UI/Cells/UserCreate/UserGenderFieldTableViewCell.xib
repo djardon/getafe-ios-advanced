@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="UserGenderFieldTableViewCell" rowHeight="97" id="KGk-i7-Jjw" customClass="UserGenderFieldTableViewCell" customModule="CursoIOSAdvanced" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="krK-fu-7FZ">
+                        <rect key="frame" x="12" y="12" width="296" height="76"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pug-pT-Ktg">
+                                <rect key="frame" x="8" y="8" width="280" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIR-Lf-CsM">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="22"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
+                                        <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="N7O-ym-P3Q">
+                                        <rect key="frame" x="0.0" y="30" width="280" height="31"/>
+                                        <segments>
+                                            <segment title="Male"/>
+                                            <segment title="Female"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pug-pT-Ktg" secondAttribute="trailing" constant="8" id="WNM-Og-EWp"/>
+                            <constraint firstItem="pug-pT-Ktg" firstAttribute="top" secondItem="krK-fu-7FZ" secondAttribute="top" constant="8" id="bdE-YL-c0L"/>
+                            <constraint firstItem="pug-pT-Ktg" firstAttribute="leading" secondItem="krK-fu-7FZ" secondAttribute="leading" constant="8" id="cMe-Kr-AHq"/>
+                            <constraint firstAttribute="bottom" secondItem="pug-pT-Ktg" secondAttribute="bottom" constant="8" id="rB0-cO-lfo"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="krK-fu-7FZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="NHL-Zc-sN6"/>
+                    <constraint firstItem="krK-fu-7FZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="Sc1-0p-gOm"/>
+                    <constraint firstAttribute="trailing" secondItem="krK-fu-7FZ" secondAttribute="trailing" constant="12" id="Xg0-Dq-yPy"/>
+                    <constraint firstAttribute="bottom" secondItem="krK-fu-7FZ" secondAttribute="bottom" constant="12" id="vuJ-3b-EPX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="genderSelector" destination="N7O-ym-P3Q" id="qCz-lO-Ggl"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="57.924107142857139"/>
+        </tableViewCell>
+    </objects>
+</document>

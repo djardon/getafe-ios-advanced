@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="UserMapFieldsTableViewCell" rowHeight="300" id="KGk-i7-Jjw" customClass="UserMapFieldsTableViewCell" customModule="CursoIOSAdvanced" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Of4-KV-vdB">
+                        <rect key="frame" x="12" y="12" width="296" height="276"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="eqa-Rn-9Pf">
+                                <rect key="frame" x="8" y="8" width="280" height="260"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DYd-YD-YKX">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="64"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IkM-ej-gVH">
+                                                <rect key="frame" x="0.0" y="0.0" width="136" height="64"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPC-EK-FJP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="136" height="32"/>
+                                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
+                                                        <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zqa-0O-P4I">
+                                                        <rect key="frame" x="0.0" y="32" width="136" height="32"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IwF-PL-MnL">
+                                                <rect key="frame" x="144" y="0.0" width="136" height="64"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSn-sf-fkz">
+                                                        <rect key="frame" x="0.0" y="0.0" width="136" height="32"/>
+                                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
+                                                        <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kxI-og-yMe">
+                                                        <rect key="frame" x="0.0" y="32" width="136" height="32"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="S8x-Gc-j97">
+                                        <rect key="frame" x="0.0" y="80" width="280" height="180"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="180" id="kBB-rl-yZh"/>
+                                        </constraints>
+                                    </mapView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="eqa-Rn-9Pf" firstAttribute="top" secondItem="Of4-KV-vdB" secondAttribute="top" constant="8" id="3fl-AT-xlo"/>
+                            <constraint firstItem="eqa-Rn-9Pf" firstAttribute="leading" secondItem="Of4-KV-vdB" secondAttribute="leading" constant="8" id="ImA-v1-R2c"/>
+                            <constraint firstAttribute="bottom" secondItem="eqa-Rn-9Pf" secondAttribute="bottom" constant="8" id="goD-9l-gn5"/>
+                            <constraint firstAttribute="trailing" secondItem="eqa-Rn-9Pf" secondAttribute="trailing" constant="8" id="wlO-Gg-8hH"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Of4-KV-vdB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="2Jd-Cf-tXh"/>
+                    <constraint firstItem="Of4-KV-vdB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="7ZK-DB-24t"/>
+                    <constraint firstAttribute="trailing" secondItem="Of4-KV-vdB" secondAttribute="trailing" constant="12" id="983-o8-w8d"/>
+                    <constraint firstAttribute="bottom" secondItem="Of4-KV-vdB" secondAttribute="bottom" constant="12" id="vp5-pI-0SZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="fieldLatitude" destination="zqa-0O-P4I" id="Trs-4U-4p5"/>
+                <outlet property="fieldLongitude" destination="kxI-og-yMe" id="kKb-kW-qMS"/>
+                <outlet property="mapView" destination="S8x-Gc-j97" id="Xch-0e-UaE"/>
+                <outlet property="view" destination="Of4-KV-vdB" id="p6G-ca-cdj"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="127.23214285714285"/>
+        </tableViewCell>
+    </objects>
+</document>
