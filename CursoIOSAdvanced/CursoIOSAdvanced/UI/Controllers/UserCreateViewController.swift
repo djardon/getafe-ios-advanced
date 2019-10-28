@@ -112,8 +112,8 @@ extension UserCreateViewController: UITableViewDelegate, UITableViewDataSource {
                                         indexPath: indexPath)
 
             case .gender:
-                cellHeight = cellGender(tableView: tableView,
-                                        indexPath: indexPath)
+                cell = cellGender(tableView: tableView,
+                                  indexPath: indexPath)
         
             case .contact:
                 cell = cellContact(tableView: tableView,
